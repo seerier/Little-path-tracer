@@ -13,7 +13,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 #set_target_properties(RayNW PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/NextWeek_build)
 #target_include_directories(RayNW PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/src/external)
 
-include_directories(${CMAKE_CURRENT_SOURCE_DIR}/src/TheRestOfYourLife/base ${CMAKE_CURRENT_SOURCE_DIR}/src/external)
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/src/TheRestOfYourLife/base ${CMAKE_CURRENT_SOURCE_DIR}/src/external ${CMAKE_CURRENT_SOURCE_DIR}/src/tools)
 add_executable(RayRL "src/TheRestOfYourLife/cmd/main.cpp")
 
 add_executable(pi "src/TheRestOfYourLife/cmd/pi.cpp")
@@ -23,3 +23,5 @@ add_executable(sphere_importance "src/TheRestOfYourLife/cmd/sphere_importance.cp
 add_executable(sphere_plot "src/TheRestOfYourLife/cmd/sphere_plot.cpp")
 add_executable(cos_cubed "src/TheRestOfYourLife/cmd/cos_cubed.cpp")
 add_executable(cos_density "src/TheRestOfYourLife/cmd/cos_density.cpp")
+
+add_executable(p3dif "src/tools/p3_ppm_difference.cpp")

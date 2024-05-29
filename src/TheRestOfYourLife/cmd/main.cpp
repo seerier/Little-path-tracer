@@ -15,7 +15,7 @@
 #include <iostream>
 
 
-int main() {
+int main(int argc, char *argv[]) {
     hittable_list world;
 
     auto red   = make_shared<lambertian>(color(.65, .05, .05));
@@ -64,6 +64,10 @@ int main() {
     cam.vup      = vec3(0, 1, 0);
 
     cam.defocus_angle = 0;
+
+    if (argc >= 2) {
+        cam.samples_per_pixel = atoi(argv[1]);
+    }
 
     cam.render(world, lights);
 }
