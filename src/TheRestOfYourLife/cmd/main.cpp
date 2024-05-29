@@ -65,9 +65,11 @@ int main(int argc, char *argv[]) {
 
     cam.defocus_angle = 0;
 
+    /*
     if (argc >= 2) {
         cam.samples_per_pixel = atoi(argv[1]);
     }
+    */
 
     cam.render(world, lights);
 }
